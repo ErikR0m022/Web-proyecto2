@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opciones</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(247, 87, 1);
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 30px; /* Tamaño de fuente más grande */
+        }
+        h1 {
+            color: #ff4d00;
+            font-size: 75px; /* Tamaño de fuente más grande */
+        }
+        .info {
+            background-color: #000000;
+            padding: 30px;
+            font-size: 25px; /* Tamaño de fuente más grande */
+        }
+        form {
+            background-color: rgb(255, 217, 0);
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+            margin: 0 auto;
+            font-size: 50px; /* Tamaño de fuente más grande */
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 28px; /* Tamaño de fuente más grande */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 16px; /* Tamaño de fuente más grande */
+        }
+        #card-element {
+            margin-top: 20px;
+            font-size: 50px; /* Tamaño de fuente más grande */
+        }
+        #card-errors {
+            color: rgb(255, 225, 0);
+            margin-top: 10px;
+            font-size: 30px; /* Tamaño de fuente más grande */
+        }
+        input[type="submit"] {
+            background-color: black;
+            color: rgb(242, 122, 9);
+            border: none;
+            padding: 100px 200px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 30px; /* Tamaño de fuente más grande */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="opciones.html">Opciones</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="locatario.html">Locatario</a></li>
+            <li><a href="pagos.html">Pago</a></li>
+            <li><a href="zonawifi.html">Zona Wifi</a></li>
+          </ul>
+        </nav>  
+        <h1>Estacionamiento</h1>
+        <br>
+    
+    <div class="info">
+        <br>
+        <h2>Información del Estacionamiento</h2>
+        <br>
+        <hr>
+        <br>
+        <p>Horario de funcionamiento: 24/7</p>
+        <br>
+        <hr>
+        <br> 
+        <p>Tarifa por hora: $20</p>
+        <br>
+        <p>Cantidad de espacios disponibles: 2,000</p>
+        <br>
+        <p>Ubicación de la oficina: En el edificio principal, planta baja</p>
+        <br>
+        <hr>
+    </div>
+    <br>
+    <h2>Cobro por Horas</h2>
+    <br>
+    <hr>
+    <br>
+    <p>Calcula el costo de estacionamiento:</p>
+    <label for="horas">Horas estacionado:</label>
+    <input type="number" id="horas" placeholder="Ej. 2">
+    <button onclick="calcularCosto()">Calcular</button>
+    <p id="costo"></p>
+    <br>
+    <hr>
+
+
+    <script>
+        function calcularCosto() {
+            const tarifaPorHora = 20;
+            const horasEstacionado = parseFloat(document.getElementById("horas").value);
+            if (!isNaN(horasEstacionado)) {
+                const costo = tarifaPorHora * horasEstacionado;
+                document.getElementById("costo").innerHTML = `Costo: $${costo}`;
+            } else {
+                document.getElementById("costo").innerHTML = "Ingresa un número válido de horas.";
+            }
+        }
+    </script>
+
+    <h3>Simulador de Estacionamiento</h3>
+    <p>Ingresa tu número de placa para encontrar un espacio de estacionamiento:</p>
+    <label for="placa">Número de Placa:</label>
+    <input type="text" id="placa" placeholder="Ej. ABC123">
+    <button onclick="buscarEspacio()">Buscar Espacio</button>
+    <p id="mensaje"></p>
+
+    <script>
+        const espaciosDisponibles = 2000; // Cantidad de espacios disponibles
+        const espaciosOcupados = new Set();
+
+        function buscarEspacio() {
+            const placa = document.getElementById("placa").value;
+            if (placa) {
+                if (espaciosOcupados.size < espaciosDisponibles) {
+                    // Busca un espacio disponible y asigna la placa
+                    let espacioAsignado;
+                    for (let i = 1; i <= espaciosDisponibles; i++) {
+                        if (!espaciosOcupados.has(i)) {
+                            espacioAsignado = i;
+                            espaciosOcupados.add(i);
+                            break;
+                        }
+                    }
+                    document.getElementById("mensaje").innerHTML = `Espacio asignado: ${espacioAsignado}`;
+                } else {
+                    document.getElementById("mensaje").innerHTML = "El estacionamiento está lleno. No hay espacios disponibles.";
+                }
+            } else {
+                document.getElementById("mensaje").innerHTML = "Ingresa un número de placa válido.";
+            }
+        }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pago con Tarjeta de Crédito/Débito</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <style>
+        body {
+            background-color: orange; /* Fondo de color naranja */
+            color: black; /* Color de texto negro */
+        }
+
+        form {
+            background-color: rgb(255, 217, 0); /* Fondo blanco para el formulario */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        #card-element {
+            margin-top: 10px;
+        }
+
+        #card-errors {
+            color: rgb(255, 225, 0);
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: black; /* Botón de pago en negro */
+            color: rgb(242, 122, 9);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+          <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="opciones.html">Opciones</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="locatario.html">Locatario</a></li>
+            <li><a href="pagos.html">Pago</a></li>
+            <li><a href="zonawifi.html">Zona Wifi</a></li>
+          </ul>
+        </nav>   
+    <h1>Realizar Pago con Tarjeta de Crédito/Débito</h1>
+    <form id="payment-form">
+        <label for="name">Nombre del Titular:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="card-element">Información de la Tarjeta:</label>
+        <div id="card-element">
+            <!-- Un elemento especial de Stripe para la entrada de tarjetas -->
+        </div>
+        <div id="card-errors"></div>
+
+        <input type="submit" value="Pagar">
+    </form>
+
+    <script>
+        // Aquí deberías incluir el código de JavaScript para interactuar con la API de Stripe y procesar el pago.
+    </script>
+    </div>
+</body>
+</html>
