@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto II</title>
+    <style>
+      
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Producto integrador. El final del proceso</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="mostrarContenido('actividades')">Actividades</a>
+    <a href="#" onclick="mostrarContenido('sistema')">Sistema</a>
+    <a href="#" onclick="mostrarContenido('codigo')">Código Fuente</a>
+    <a href="#" onclick="mostrarContenido('reporte')">Reporte de Modificaciones</a>
+</nav>
+
+<div class="content" id="contenidoInicial">
+    <h2>Bienvenido al Proyecto II</h2>
+    <p>Selecciona una opción del menú para ver las actividades.</p>
+</div>
+
+<script>
+    function mostrarContenido(seccion) {
+        var contenidoInicial = document.getElementById('contenidoInicial');
+        contenidoInicial.style.display = 'none';
+
+        var actividades = document.getElementById('actividades');
+        var sistema = document.getElementById('sistema');
+        var codigo = document.getElementById('codigo');
+        var reporte = document.getElementById('reporte');
+
+        actividades.style.display = 'none';
+        sistema.style.display = 'none';
+        codigo.style.display = 'none';
+        reporte.style.display = 'none';
+
+        switch (seccion) {
+            case 'actividades':
+                actividades.style.display = 'block';
+                break;
+            case 'sistema':
+                sistema.style.display = 'block';
+                break;
+            case 'codigo':
+                codigo.style.display = 'block';
+                break;
+            case 'reporte':
+                reporte.style.display = 'block';
+                break;
+        }
+    }
+</script>
+
+<div class="content" id="actividades" style="display: none;">
+  <h2>Actividades Realizadas en el Curso</h2>
+  <h3> Actividad 1 Primera fase de desarrollo, revisión y ajuste de los Sprints </h3>
+  <p><br>
+    <h4>¿Qué implica un Sprint Schedule en SCRUM?</h4>
+    <br>
+    <br>
+    Un Sprint Schedule hace referencia a la programación de tiempo y fechas específicas que rige laduración de
+    un Sprint en el contexto del desarrollo de un proyecto.
+    <br>
+    <br>
+    Un Sprint representa un periodo fijo y breve
+    durante el cual se enfoca en la implementación de un conjunto previamente seleccionado de
+    funcionalidades o historias de usuario extraídas del backlog del proyecto.<br>
+    <br>
+    <h4>¿Cómo se lleva a cabo el proceso?</h4>
+    <br>
+    <h5>1. Planificación del Sprint:</h5><br>
+    - Se procede a la selección de las tareas del backlog que serán abordadas en el próximo Sprint.<br>
+    - Se determinan las fechas de inicio y finalización del Sprint.<br>
+    - El equipo se compromete a finalizar las tareas dentro del plazo acordado.<br>
+    <br>
+    <h5>2. Desarrollo:</h5><br>
+    - Durante el Sprint, el equipo se dedica al desarrollo de las tareas planificadas.<br>
+    - Se realizan reuniones diarias de seguimiento para evaluar el progreso y resolver posibles
+    obstáculos.<br>
+    <h5>3. Revisión y Retrospectiva:</h5><br>
+    - En la revisión, se presenta el trabajo completado a los interesados para recibir sus
+    comentarios.<br>
+    - En la retrospectiva, el equipo analiza su propio proceso de trabajo y establece acciones para
+    mejorarlo.<br>
+    <h5>4. Inicio de un Nuevo Sprint:</h5><br>
+    - Después de la revisión y la retrospectiva, se da inicio a un nuevo Sprint con una reunión de
+    planificación donde se eligen las próximas historias y tareas a abordar.<br>
+    
+    <h5>¿Cómo se aplica en función del backlog?</h5><br>
+    <h5>1. Planificación del Sprint:</h5><br>
+    - Preparación:<br>
+    - El Product Owner prioriza el backlog del producto, identificando las historias de usuario y
+    elementos listos para su implementación.<br>
+    - El Scrum Master coordina la reunión de planificación y asegura la preparación del equipo.<br>
+    - El equipo de desarrollo examina el backlog del producto y está preparado para discutir lastareas a
+    incluir en el próximo Sprint.<br>
+    - Objetivo del Sprint:<br>
+    - El Product Owner comunica el objetivo del Sprint para guiar el trabajo del equipo.<br>
+    - Selección de Historias de Usuario:<br>
+    - El equipo de desarrollo, junto con el Product Owner, escoge las historias de usuario y
+    elementos del backlog que abordarán durante el Sprint, priorizándolos según su valor.<br>
+    - Descomposición en Tareas:<br>
+    - Luego de seleccionar las historias, el equipo de desarrollo divide estas en tareas más
+    pequeñas y manejables, incluyendo actividades de diseño, desarrollo y pruebas.<br>
+    - Estimaciones de Esfuerzo:<br>
+    - El equipo de desarrollo estima el esfuerzo requerido para cada tarea, ya sea en puntos dehistoria
+    o en horas.<br>
+    - Capacidad del Equipo:<br>
+    - El equipo de desarrollo considera su capacidad actual, basada en la velocidad histórica, parano
+    comprometerse con más trabajo del que pueden completar de manera realista.<br>
+    - Compromiso del Equipo:<br>
+    - El equipo se compromete a finalizar todas las tareas seleccionadas para el Sprint, lo que esesencial
+    para la responsabilidad y transparencia.<br>
+    <h5>2. Establecimiento de Fechas:</h5><br>
+    <br>
+    - Duración del Sprint:<br>
+    - La duración típica varía de 2 a 4 semanas, según las necesidades y complejidad delproyecto.<br>
+    - Fechas de Inicio y Finalización:<br>
+    - Se establecen las fechas de inicio y finalización del Sprint, marcando su comienzo oficial yfecha de
+    conclusión.<br>
+    - Calendario de Referencia:<br>
+    - Se utiliza un calendario de referencia para mostrar las fechas de todos los Sprints
+    programados y coordinar las actividades.<br>
+    - Flexibilidad:<br>
+    - Se reconoce que pueden surgir situaciones inesperadas, por lo que el equipo debe estar
+    dispuesto a adaptarse de manera transparente y en consulta con el Product Owner y los
+    stakeholders.<br>
+    <br>
+    <h5>3. Compromiso del Equipo:</h5><br>
+    - El equipo se compromete a cumplir con el trabajo dentro del período de tiempo definido para
+    mantener el enfoque y la responsabilidad.<br>
+    <br>
+    <h5>4. Desarrollo y Seguimiento:</h5><br>
+    - Inicio del Desarrollo:<br>
+    - El equipo se enfoca en implementar las tareas del Sprint Backlog.<br>
+    - Se realizan reuniones diarias de seguimiento para evaluar el progreso.<br>
+    - Transparencia y Colaboración:<br>
+    - Se fomenta la transparencia y colaboración en el equipo para resolver problemas y avanzar.<br>
+    - Cualquier impedimento se comunica y resuelve rápidamente.<br>
+    - Avance y Cumplimiento.<br>
+    - El equipo monitorea continuamente el avance de las tareas y utiliza gráficos como el
+    Burndown Chart para visualizar el progreso.<br>
+    - Flexibilidad y Adaptación:<br>
+    - El equipo es flexible y capaz de adaptarse a cambios significativos de manera transparente yen
+    consulta con el Product Owner y stakeholders.<br>
+    - Calidad y Pruebas:<br>
+    - Se realizan pruebas de calidad para garantizar que el trabajo cumple con los criterios de
+    aceptación.<br>
+    - Entrega Potencial:<br>
+    - El producto puede llegar a ser potencialmente entregable al final del Sprint, dependiendo dela
+    decisión del Product Owner.<br>
+    - Documentación y Comunicación:<br>
+    - Se mantiene documentación adecuada para facilitar la comunicación y colaboración.<br>
+    <br>
+    <h5>5. Revisión y Retrospectiva:</h5><br>
+    - Revisión:<br>
+    - Se presenta el trabajo completado a los interesados y se recibe feedback.<br>
+    - Retrospectiva:<br>
+    - El equipo evalúa su proceso y establece acciones para mejorarlo.<br>
+    <br>
+    <h5>6. Inicio de un Nuevo Sprint:</h5><br>
+    - Se inicia un nuevo Sprint con una reunión de planificación similar a la anterior, seleccionandolas
+    próximas historias y tareas a abordar.<br>
+    Este ciclo se repite en sucesivos Sprints, permitiendo un desarrollo iterativo e incremental delproducto.<br></p>
+    <br>
+    <table>
+      <tr>
+          <th>Elemento de trabajo pendiente</th>
+          <th>Puntos de historia</th>
+          <th>Responsable</th>
+          <th>Estado</th>
+          <th>Estimado original</th>
+          <th>Día 1</th>
+          <th>Día 2</th>
+          <th>Día 3</th>
+          <th>Día 4</th>
+          <th>Día 5</th>
+          <th>Revisión del Sprint</th>
+      </tr>
+      <tr>
+        <td><h3>ID#1</h3></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+      <td>ID#1. Desarrollo de la página de Bienvenida.</td>
+      <td>5</td>
+      <td>Desarrollador A</td>
+      <td>Finalizado</td>
+      <td>3 día</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>✓</td>
+      <td>Finalizado</td>
+  </tr>
+  <tr>
+    <td>ID#1.1 Desarrollo de la página.</td>
+    <td>5</td>
+    <td>Desarrollador B</td>
+    <td>Finalizado</td>
+    <td> 1 día</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>✓</td>
+    <td>✓</td>
+    <td>Finalizado</td>
+</tr>
+<tr>
+  <td>ID#1.2 Desarrollo de la página de opciones.</td>
+  <td>5</td>
+  <td>Desarrollador A</td>
+  <td>Finalizado</td>
+  <td> 2 día</td>
+  <td>✓</td>
+  <td></td>
+  <td></td>
+  <td>✓</td>
+  <td></td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td><h3>ID#2</h3></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2. Implementar sistemas de registro para usuario.</td>
+  <td>4 </td>
+  <td>Desarrollador B</td>
+  <td>Finalizado</td>
+  <td> 4 día</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td></td>
+  <td></td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td>ID#2.1. Implementar sistema de registro de locatario.</td>
+  <td>4 </td>
+  <td>Desarrollador A</td>
+  <td>Finalizado</td>
+  <td> 2 día</td>
+  <td>✓</td>
+  <td></td>
+  <td>✓</td>
+  <td></td>
+  <td></td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td>ID#2.2. Implementar sistema de registro de pagos.</td>
+  <td>4 </td>
+  <td>Desarrollador A</td>
+  <td>Finalizado</td>
+  <td> 4 día</td>
+  <td>✓</td>
+  <td></td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td><h3>ID#3</h3></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#3 Crear página de selección de estacionamiento.</td>
+  <td>3 </td>
+  <td>Desarrollador A</td>
+  <td>Finalizado</td>
+  <td> 2 día</td>
+  <td>✓</td>
+  <td></td>
+  <td>✓</td>
+  <td></td>
+  <td>✓</td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td><h3>ID#4</h3></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#4 Integrar sistema de Wifi Gratuito.</td>
+  <td>3 </td>
+  <td>Desarrollador C</td>
+  <td>Finalizado</td>
+  <td> 5 día</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>Finalizado</td>
+</tr>
+<tr>
+  <td><h3>ID#5</h3></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#5 Pruebas de funcionalidad y revisión.</td>
+  <td>3 </td>
+  <td>Equipo de control de calidad</td>
+  <td>Finalizado</td>
+  <td> 3 día</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>✓</td>
+  <td>Finalizado</td>
+</tr>
+      <tr>
+          <td>Total</td>
+          <td>43</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </table>
+  <h3>Backlog</h3><br>
+  <table>
+    <tr>
+      <th><h3>Identificador (ID) de la Historia</h3></th>
+      <th>Enunciado dela Historia</th>
+      <th>Alias</th>
+      <th>Estado</th>
+      <th>Dimensión/ Esfuerzo</th>
+      <th>Interacción (Sprint)</th>
+      <th>Prioridad</th>
+      <th>Comentarios</th>
+  </tr>
+  <tr>
+    <th><h3>ID#1.1</h3></th>
+    <th>Como usuario,<br>
+quiero una página<br>
+de inicio, precios<br>
+por hora, fácil<br>
+de navegar, una<br>
+portada y<br>
+botones de<br>
+acceso, para las<br>
+diferentes<br>
+interacciones.<br></th>
+    <th>Página de<br>
+inicio</th>
+    <th>Finalizada</th>
+    <th>5</th>
+    <th>2</th>
+    <th>Alto</th>
+    <th>Se colocan las<br>
+necesidades<br>
+del cliente<br>
+(usuario).</th>
+</tr>
+<tr>
+  <td><h3>ID#1.1<h/3></td>
+  <td>Como dueño de<br>
+la empresa quiero<br>
+una página de<br>
+inicio, donde los<br>
+clientes visualicen<br>
+todas las<br>
+opciones y<br>
+puedan navegar<br>
+de manera fácil y<br>
+sencilla, Un fondo<br>
+de portada y<br>
+botones<br>
+de acciones.</td>
+  <td>Página de<br>
+inicio</td>
+  <td>Finalizada</td>
+  <td>5</td>
+  <td>2</td>
+  <td>Alta</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#1.1</td>
+  <td>Como desarrollador se<br>
+crea una página<br>
+de inicio,<br>
+colocando los<br>
+precios por horas<br>
+para el<br>
+consumidor, de<br>
+fácil navegación<br>
+implementando<br>
+una portada de la<br>
+plaza, logo de la<br>
+empresa,<br>
+botones de<br>
+interacción para<br>
+su navegación<br>,
+nombre y función<br>
+de este.<br></td>
+  <td>Página<br>
+de<br>
+opciones</td>
+  <td>Finalizado</td>
+  <td>5</td>
+  <td>2</td>
+  <td>Alta</td>
+  <td>Se<br>
+    implementan<br>
+    las<br>
+    necesidades<br>
+    del cliente,<br>
+    tanto usuario<br>
+    como Cliente<br>
+    ELIPARK</td>
+</tr>
+<tr>
+  <td>ID#1.1</td>
+  <td>Como dueño de la<br>
+empresa quiero una<br>
+páginade inicio,<br>
+donde los clientes<br>
+visualicen todas las<br>
+opciones y puedan<br>
+navegar de manera<br>
+fácil y sencilla, Un<br>
+fondo de portada y<br>
+botones<br>
+de acciones.<br></td>
+  <td>Página de<br>
+inicio</td>
+  <td>Finalizado<br></td>
+  <td>5<br></td>
+  <td>2<br></td>
+  <td>Alta<br></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#1.2</td>
+  <td>Como cliente quiero<br>
+una página para<br>
+distintos<br>
+funcionamientos,<br>
+pagos con tarjeta de<br>
+débito, crédito,<br>
+registros y secciones.<br>
+</td>
+  <td>Página de<br>
+opciones</td>
+  <td>Finalizado<br></td>
+  <td>5</td>
+  <td>3</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#1.2</td>
+  <td>Como usuario,<br>
+requiero una página<br>
+para seleccionar<br>
+diferentes opciones,<br>
+como pagos,<br>
+selección de<br>
+estacionamiento,<br>
+registro en<br>
+sitio web.</td>
+  <td>Página de<br>
+opciones</td>
+  <td>Finalizado</td>
+  <td>5</td>
+  <td>3</td>
+  <td>Finalizado</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#1.2</td>
+  <td>Como desarrollador,<br>
+se desarrolla una<br>
+página de selección y<br>
+navegación, para que<br>
+el usuariopueda<br>
+realizar diferentes<br>
+acciones, como<br>
+pagos, registros,<br>
+opciones,<br>
+comentarios,<br>
+usuarios como<br>
+locatarios y zonas de<br>
+wifi.</td>
+  <td>Página de<br>
+opciones</td>
+  <td>Finalizado</td>
+  <td>5</td>
+  <td>3</td>
+  <td>Alta</td>
+  <td>Fila 1</td>
+</tr>
+<tr>
+  <td>ID#2</td>
+  <td>Como Usuario,<br>
+quiero registrarme<br>
+para acceder al<br>
+estacionamiento, en<br>
+el cual puedatener<br>
+un lugar y saber<br>
+dónde pueda dejar<br>
+miautomóvil,<br>
+utilizando mi<br>
+nombre, modelo de<br>
+auto y placa de mi<br>
+vehículo.</td>
+  <td>Registro de<br>
+Usuarios</td>
+  <td>Finalizado</td>
+  <td>4</td>
+  <td>4</td>
+  <td>Media</td>
+  <td>Establecer<br>
+lugares de<br>
+este<br></td>
+</tr>
+<tr>
+  <td>ID#2</td>
+  <td>Como Cliente, se<br>
+requiere que el<br>
+usuario se registre<br>
+dentro del sitio, para<br>
+poder tener un<br>
+historial de este, ya<br>
+sea un usuario<br>
+común,usuario<br>
+frecuente, usuario<br>
+proveedor, usuario<br>
+locatario o<br>
+trabajador del lugar,<br>
+usando<br>
+su nombre,<br>
+matricula y<br>
+automóvil que usa.<br>
+</td>
+  <td>Registro de<br>
+Usuarios</td>
+  <td>Finalizado</td>
+  <td>4</td>
+  <td>4</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2</td>
+  <td>Como desarrollador,<br> 
+se requiere crear un<br>
+sitio en el cual el<br>
+usuario se pueda<br>
+registrar, nombre,<br>
+apellido, carro,<br>
+matricula, usuario<br>
+regular, de<br>
+visita o locatario.<br></td>
+  <td>Registro de<br>
+Usuarios</td>
+  <td>Finalizado<br></td>
+  <td>4</td>
+  <td>4</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.1</td>
+  <td>Como Locatario, quiero<br>
+registrarme para<br>
+tener privilegios<br>
+dentro del<br>
+estacionamiento,<br>
+como cobros<br>
+Mensuales, lugar<br>
+designado y<br>
+descuentos.<br>
+</td>
+  <td>Registro de<br>
+Locatario
+</td>
+  <td>Finalizado</td>
+  <td>4</td>
+  <td>5</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.1</td>
+  <td>Como Cliente, requiero<br>
+un sitio principal para los<br>
+locatarios, como<br>
+proveedores y<br>
+trabajadores del<br>
+establecimiento,<br>
+asignarles un lugar y un<br>
+cobro distinto.<br></td>
+  <td>Registro de<br>
+locatario</td>
+  <td>Finalizado</td>
+  <td>4</td>
+  <td>5</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.1</td>
+  <td>Como Desarrollador, se<br>
+requiere crear una página<br>
+para el pago del<br>
+estacionamientoo,<br>
+implementando o,<br>
+Sistema de pago seguro<br>
+por tarjeta de crédito <br>
+débito.</td>
+  <td>Registro de<br>
+locatario
+</td>
+  <td>Finalizado</td>
+  <td>4</td>
+  <td>5</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.2</td>
+  <td>Como Cliente, se requiere<br>
+que el usuario se registre<br>
+dentro del sitio, para<br>
+poder tener un historial<br>
+de este, ya sea un usuario<br>
+común, usuario<br>
+frecuente, usuario<br>
+proveedor, usuario<br>
+locatario o trabajador del<br>
+lugar, usando su<br>
+nombre, matricula y<br>
+automóvil que usa.<br></td>
+  <td>Registro de<br>
+pagos</td>
+  <td>En<br>
+proceso</td>
+  <td>4</td>
+  <td>6</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.2</td>
+  <td>Como Usuario, quiero<br>
+poder pagar el<br>
+estacionamiento en línea,<br>
+pudiendo registrar mi<br>
+tarjeta de débito o<br>
+crédito, de una manera<br>
+fácil segura y sencilla, que<br>
+coloquen cada paso<br>
+a seguir.</td>
+  <td>Registro de<br>
+pagos</td>
+  <td>En<br>
+proceso</td>
+  <td>4</td>
+  <td>6</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#2.2</td>
+  <td>Como desarrollador, se<br>
+implementa una página<br>
+en la cual el usuario,<br>
+puede colocar su<br>
+información para su pago<br>
+con tarjetas de crédito o<br>
+débito, así mismo se<br>
+implementa unsistema<br>
+de seguridad el cual<br>
+protege su información<br>
+de 3ros, con la certeza de<br>
+que
+nadie podrá tener acceso<br>
+a la misma.
+</td>
+  <td>Registro de<br>
+pagos</td>
+  <td>En<br>
+proceso</td>
+  <td>4</td>
+  <td>6</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#3</td>
+  <td>Como cliente,quiero que<br>
+el usuario pueda<br>
+seleccionar un espacio<br>
+en el cual pueda dejar<br>
+su vehículo.</td>
+  <td>Selección de<br>
+estacionamiento</td>
+  <td>No<br>
+iniciado</td>
+  <td>6</td>
+  <td>7</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#3</td>
+  <td>Como usuario, quiero<br>
+seleccionar mi lugar de<br>
+estacionamiento.<br>
+</td>
+  <td>Selección de<br>
+estacionamiento<br></td>
+  <td>No<br>
+iniciado
+</td>
+  <td>3</td>
+  <td>7</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#3 </td>
+  <td>Como desarrollador,
+se requiere hacer
+un conteo de carros
+que entran y salen
+del establecimiento,
+para
+establecer un lugar
+al usuario.</td>
+  <td>Selección de
+estacionamiento.</td>
+  <td>No iniciado</td>
+  <td>3</td>
+  <td>4</td>
+  <td>Media</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#4</td>
+  <td>Como usuario,<br>
+quiero tener acceso<br>
+a internet gratuito y<br>
+seguro, para entrar<br>
+al sitio web.<br></td>
+  <td>Acceso<br>
+a<br>
+internet<br>
+</td>
+  <td>No<br>
+iniciado</td>
+  <td>3</td>
+  <td>8</td>
+  <td>Baja</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#4</td>
+  <td>Como Gerente de<br>
+Plaza, se requiere<br>
+implementar puntos<br>
+de acceso de<br>
+internet dentrodel<br>
+estacionamiento y<br>
+plaza para<br>
+el usuario.</td>
+  <td>Acceso<br>
+a<br>
+internet</td>
+  <td>No<br>
+iniciado</td>
+  <td>3</td>
+  <td>8</td>
+  <td>Baja</td>
+  <td></td>
+</tr>
+<tr>
+  <td>ID#5</td>
+  <td>Como equipode<br>
+QA, quieroRealizar<br>
+pruebas<br>
+exhaustivas del<br>
+sistema para<br>
+aprobar su<br>
+lanzamiento.</td>
+  <td>Pruebas<br>
+y<br>
+revisión</td>
+  <td>No<br>
+iniciado</td>
+  <td>3</td>
+  <td>9</td>
+  <td>Baja<br></td>
+  <td>Establecer<br>
+todos los<br>
+puntos para<br>
+el<br>
+desarrollo<br>
+correcto</td>
+</tr>
+<tr>
+  <td>ID#5</td>
+  <td>Como desarrollador,se<br>
+implementan los<br>
+análisis y se<br>
+modifican los<br>
+cambios u/o errores<br>
+encontrados en el<br>
+proyecto.
+</td>
+  <td>Pruebas<br>
+y<br>
+revisión
+</td>
+  <td>No<br>
+iniciado
+</td>
+  <td>3</td>
+  <td>9</td>
+  <td>Baja</td>
+  <td></td>
+</tr>
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+  </table>
+  <br>
+    <h3> Actividad 2. Segunda fase de desarrollo, revisión y ajuste de los Sprints y el backlog </h3><br>
+    <h5>¿Qué procesos se llevaron a cabo?</h5><br>
+    <br>
+     <p>Segunda fase de desarrollo, revisión y ajuste de los Sprints y el backlog<br>
+      <br>
+     Se Modificaron los sprint:<br>
+     <br>
+     El tiempo que se tenía  establecido desde un principio para cada sprint era demasiado extenso o muy corto para llevarlo a cabo, a lo que se llegó a un acuerdo después de las reuniones establecidas, que tendrían que modificarse los tiempos para optimizar el proceso de su desarrollo<br>
+     <br>
+     ●	Se realizaron las modificaciones el ID#1.2,ID#2, ID#2.1,ID# 2.2 y ID#2.3 de estar pendiente se finalizaron.<br>
+     <br>
+     ●	Se modificaron los estimados de horas, asignando la cantidad necesaria para su desarrollo.<br>
+     <br> 
+     ●	En el backlog se modificaron y se distribuye de mejor manera para un mejor entendimiento conservando la idea que se establece desde un principio.<br>
+     <br> 
+     ●	Los Sprints se ajustaron por exceder la cantidad recomendada por Scrum.<br>
+     <br></div</p>
+     <h3>Actividad 3. Tercera fase de Desarrollo, revisión y ajuste de los Sprint y el backlog</h3><br>
+     <br>
+     <h5>En esta actividad los principales puntos que se pidieron fueron:</h5><br>
+     <br>
+     <p>•	La tercera fase de progreso de desarrollo de los Sprint.<br>
+      <br>
+      •	Los últimos ajustes que tuviste que hacer.<br>
+      <br> 
+      •	La liga de Github donde se guardan los avances del desarrollo con React.<br>
+      <br>
+      Principales cambios en el Sprint:<br>
+      <br>
+      <h5>1.	El ID # 1, ID# 1.1. ID # 1.2, se incorporaron al Sprint 1, por que se referían a la misma tarea a la “Página principal”.</h5><br>
+      <br>
+      -	Se modificaron todas las tareas de LOS Sprint.<br>
+      <br>
+      -	Se modificaron los tiempos de cada tarea, para que fueran terminados a tiempo.<br>
+      <br>
+      -	Se incorpora el tiempo de termino del Sprint 1, quedo establecido en 11 días aproximadamente, cambiando si así lo requiere en el proceso de diseño.<br>
+      <br> 
+      <h5>2.	El ID#2, ID# 2.2, se incorporan formando un solo Sprint por que se refieren al mismo elemento que es “Registro de personas y vehículos” estos Id conformaran el Sprint # 2.</h5><br>
+      <br>
+      -	Se modifican todas las tareas del Backlog por los cambios establecidos en los Sprint y para su mejor entendimiento.<br>
+      <br>
+      -	Se modifican los tiempos de cada tarea, porque los tiempos establecidos nos dimos cuenta de que no se cumplirían en el tiempo establecido.<br>
+      <br>
+      -	Se incorpora el tiempo de término del Sprint 2, quedo establecido en 21 días aproximadamente, cambiando si así lo requiere en el proceso de diseño.<br>
+      <br>
+      <h5>3.	 El ID# 2.1 se incorpora como el Sprint 3 y se integra el área de registro de vehículos quedando   como “Registro de locatario”.</h5><br>
+      <br>
+      -	Se modifican todas las tareas de los Sprint por cambios establecidos en los ID y para su mayor entendimiento.<br>
+      <br>
+      -	Se modifican los tiempos por el cambio de tareas, para que se lleve a cabo en el tiempo establecido, sin esperar contratiempos.<br>
+      <br>
+      -	Se establece el tiempo de termino de Sprint quedando en 8 días.<br>
+      <br>
+      <h5>4.	El ID# 2.2, dicho ID forma el Sprint 4, llevado por nombre “Pagos con tarjeta crédito/debito”.</h5><br>
+      <br>
+      -	Se modifican cada una de las tareas, por el cambio de los Sprint y para su mejor entendimiento para el programador.<br>
+      <br>
+      -	Se modifican los tiempos establecidos, por el aumento de tareas en EL sprint.<br>
+      <br>
+      -	Se establece el tiempo de termino de Sprint quedando en 7 días.<br>
+      <br>
+      <h5>5.	Sele cambia el nombre de ID# 4 a ID#5 que lleva por nombre “Acceso a Internet”.</h5><br>
+      <br>
+      -	Se incorporan nuevas tareas y se modifica cada una.<br>
+      <br>
+      -	Se modifican cada unos de los tiempos de cada tarea por cuestiones de tarea.<br>
+      <br>
+      -	Se establece el tiempo de termino de Sprint en 6 días.<br>
+      <br>
+      <h5>6.	Se llega al acuerdo de eliminar el ID#5 que llevaba por nombre “Pruebas de funcionalidad y revisión” por cuestiones por cuestiones de tiempo y de la  metodología Scrum que solo permite integrar 5 Sprint.</h5><br></p>
+
+</div>
+<div class="content" id="sistema" style="display: none;">
+  <h2>Sistema Implementado</h2>
+  <p>Pagina principal</p>
+  <img src="Imagenes/Imagen1.png">
+  <p>Sprint 1</p>
+  <img src="Imagenes/Imagen2.png">
+  <img src="Imagenes/Imagen3.png">
+  <p>Registro de personas y vehículos</p>
+  <img src="Imagenes/Imagen6.jpg">
+  <p>Sprint 2:</p>
+  <img src="Imagenes/Imagen7.png">
+  <img src="Imagenes/Imagen8.png">
+  <p>Registro para locatario</p>
+  <img src="Imagenes/Imagen9.jpg">
+  <p>Sprint 3:</p>
+  <img src="Imagenes/Imagen10.png">
+  <img src="Imagenes/Imagen11.png">
+  <p>Pago con tarjeta crédito/ debito</p>
+  <img src="Imagenes/Imagen12.jpg">
+  <p>Sprint 4:</p>
+  <img src="Imagenes/Imagen13.png">
+  <img src="Imagenes/Imagen14.png">
+</div>
+
+<div class="content" id="codigo" style="display: none;">
+  <h2>Código Fuente</h2>
+  <a href=https://github.com/ErikR0m022/Web-proyecto2.git target="_blank">Codigo En Github</a>
+  <p>pagina Bienvenida</p>
+  <img src="Imagenes/Codigo1.png">
+  <p>pagina principal</p>
+  <img src="Imagenes/codigo2.png">
+  <p>Registro de Personas y Vehículos</p>
+  <img src="Imagenes/codigo3.png">
+  <p>Locatario</p>
+  <img src="Imagenes/codigo4.png">
+  <p>Pago con Tarjeta de Crédito/Débito</p>
+  <img src="Imagenes/codigo5.png">
+
+</div>
+
+<div class="content" id="reporte" style="display: none;">
+  <h2>Reporte de Modificaciones Realizadas</h2><br>
+  <br>
+  <p><h5>Reporte de las Modificaciones Realizadas de la actividad 1 a la 2</h5><br>
+    <br>
+    <h5>Revisión y Retrospectiva:</h5>
+    <br>
+     - Ajustes: Se realizaron ajustes en los tiempos establecidos en el backlog y en los Sprints se ajustó su cantidada por las recomendaciones de Scrum<br>
+     - Revisión:  El equipo evaluó su proceso y establece acciones para mejorarlo.<br>
+     - Retrospectiva: Que realizo bien, que falta por hacer y las mejoras.<br>
+     <br>
+     <h5>Reportes del 2;</h5><br>
+     Reportes del 2;<br>
+<br>
+<h5> 1.	El ID # 1, ID# 1.1. ID # 1.2, se incorporaron al Sprint 1, por que se referían a la misma tarea a la “Página principal”.</h5><br>
+-	Se modificaron los tiempos de cada tarea, porque seles estimo demasiado días para una sola tarea.<br>
+-	Se incorporo un numero de tareas, para identificar cada tarea. <br>
+-	Se incorpora la fecha de inicio y final del Sprint, con fecha de comienzo de l9 de octubre al 19 de octubre, estimación de termino en 2 semana.<br>
+-	Se asignan los roles de diseño.<br>
+-	 Se asignan los días y horarios para reuniones para las modificaciones, progresos y dudas en equipo.<br>
+-	Se realizo la calendarización de las tareas del Sprint 1.<br>
+-	Se incorporo un calendario para las reuniones en equipo y acuerdos llegados.<br>
+<h5> 2.	El ID # 2, ID# 2.1. ID # 2.2, se incorporaron al Sprint 2, por que se referían a la misma tarea a la “Sistema de registro de usuario”.</h5><br>
+-	Se modificaron los tiempos de cada tarea, porque seles estimo demasiado días para una sola tarea.<br>
+-	Se incorpora la fecha de inicio y final del Sprint, comenzando el 19 de octubre al 31 del mes en curso, con duración de 2 semanas.<br>
+-	Se siguen con los mismos roles.<br>
+-	 Se siguen con los mismos días y horarios para reuniones para las modificaciones, progresos y dudas en equipo.<br>
+-	Se realizo la calendarización de las tareas del Sprint 2.<br>
+-	Se sigue incorporando el calendario para las reuniones en equipo y acuerdos llegados.<br>
+<h5> 3.	El ID # 3, se incorporaron al Sprint 3, por que se referían a la misma tarea a la “”.</h5><br>
+-	Se vuelven a modificar los tiempos de cada tarea, porque seles estimo demasiado días para una sola tarea.<br>
+-	Se incorpora la fecha de inicio y final del Sprint, comenzando el 01 noviembre al 06 del mes en curso, con duración de 1 semana.<br>
+-	Se siguen con los mismos roles.<br>
+-	 Se siguen con los mismos días y horarios para reuniones para las modificaciones, progresos y dudas en equipo.<br>
+-	Se realizo la calendarización de las tareas del Sprint 3.<br>
+-	Se sigue incorporando el calendario para las reuniones en equipo y acuerdos llegados.<br>
+<h5> 4.	El ID # 4, se incorporaron al Sprint 4, con nombre “Selección de estacionamiento”.</h5><br>
+-	Se vuelven a modificar los tiempos de cada tarea, porque seles estimo demasiado días para una sola tarea.<br>
+-	Se incorpora la fecha de inicio y final del Sprint, comenzando el 07 noviembre al 10 del mes en curso, con duración de 1 semana.<br>
+-	Se siguen con los mismos roles.<br>
+-	 Se siguen con los mismos días y horarios para reuniones para las modificaciones, progresos y dudas en equipo.<br>
+-	Se realizo la calendarización de las tareas del Sprint 4.<br>
+-	Se sigue incorporando el calendario para las reuniones en equipo y acuerdos llegados.<br>
+<h5> 5.	El ID # 5, se incorporaron al Sprint 5, con nombre “Pruebas y revisión”.</h5><br>
+-	Se vuelven a modificar los tiempos de cada tarea, porque seles estimo demasiado días para una sola tarea.<br>
+-	Se incorpora la fecha de inicio y final del Sprint, comenzando el 13 noviembre al 17 del mes en curso, con duración de 1 semana.<br>
+-	Se siguen con los mismos roles.<br>
+-	 Se siguen con los mismos días y horarios para reuniones para las modificaciones, progresos y dudas en equipo.<br>
+-	Se realizo la calendarización de las tareas del Sprint 5.<br>
+-	Se sigue incorporando el calendario para las reuniones en equipo y acuerdos llegados.<br>
+Tanto los roles, como los horarios, días se tareas se  modificaran de acuerdo a la trayectoria y necesidades del proyecto.<br>
+
+    </p>
+</div>
+
+</body>
+</html>
